@@ -63,7 +63,7 @@ beds %>%
 ```
 
 ```{r}
-### Goal day 2:
+### PDA evidence 2.5: Exploratory data analysis
 # -> Focus on all_acute and check what can be retrieved from the dataset to answer:
 # effect of covid on bed occupancy
 
@@ -87,7 +87,6 @@ beds %>%
   aes(x = yq(quarter), y = percentage_occupancy) +
   geom_col() +
   facet_wrap(~ hb)
-
 ```
 
 ```{r}
