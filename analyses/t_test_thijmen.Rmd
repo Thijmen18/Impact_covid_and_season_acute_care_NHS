@@ -79,6 +79,7 @@ test_winter <- attendances_ae %>%
   ungroup() %>% 
   select(total_attendances)
 
+## PDA evidence 2.7 - interpreting the results of statistical analysis
 # do final hypothesis test
 t.test(test_summer$total_attendances,
        test_winter$total_attendances,
@@ -86,6 +87,21 @@ t.test(test_summer$total_attendances,
        paired = FALSE,
        conf.level = 0.95)
 ```
+Interpretation:
+Results of the Two sample t-test above show that the calculated p-value is smaller
+than the α value:
+
+p-value < α
+2.694e-07 < 0.05
+
+This means we can reject H0. We have found enough evidence in our data to suggest 
+that total A&E attendances during winter is statistically significantly different
+than the A&E attendances during the summer.
+
+
+
+
+
 
 ```{r}
 waiting_times %>% 
