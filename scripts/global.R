@@ -17,18 +17,18 @@ library(sf) # if using geometry
 ## See below (Thijmen start...)
 
 ## for tab 2: hospital admissions
-join_ha_map <- read_csv("../data/cleaned_data/join_ha_map.csv") %>% 
+join_ha_map <- read_csv("cleaned_data/join_ha_map.csv") %>% 
   filter(hb != "S92000003")
-ha_demo <- read_csv("../data/cleaned_data/ha_demo_clean.csv")
+ha_demo <- read_csv("cleaned_data/ha_demo_clean.csv")
 
 ## for tab 3: bed occupancy
-hospital_location_occupancy <- read_csv("../data/cleaned_data/hospital_location_occupancy.csv")
-occupancy_per_hb <- read_csv("../data/cleaned_data/occupancy_per_hb.csv") %>% 
+hospital_location_occupancy <- read_csv("cleaned_data/hospital_location_occupancy.csv")
+occupancy_per_hb <- read_csv("cleaned_data/occupancy_per_hb.csv") %>% 
   mutate(quarter = zoo::as.yearqtr(quarter))
 
 ## for tab 4: delayed discharge
-delayed <- clean_names(read_csv("../data/cleaned_data/delayed.csv"))
-map_means <- read_csv("../data/cleaned_data/delayed_map_means.csv")
+delayed <- clean_names(read_csv("cleaned_data/delayed.csv"))
+map_means <- read_csv("cleaned_data/delayed_map_means.csv")
 
 # lists for selectors ----
 
@@ -181,18 +181,18 @@ map_plot <- map_means %>%
 #### Open cleaned datasets of A&E attendances (demographics and specifying season terms) 
 
 # 1. Open table specifying season
-attendances_ae <- read.csv("../data/cleaned_data/ae_attendences_cleaned.csv")
+attendances_ae <- read.csv("cleaned_data/ae_attendences_cleaned.csv")
 
 ########
 # 2. Open cleaned table for plotting demographics for  season 
 
-demo_attendances_season <- read.csv("../data/cleaned_data/demographics_ae_season_cleaned.csv")
+demo_attendances_season <- read.csv("cleaned_data/demographics_ae_season_cleaned.csv")
 
 ##### 
 # 3. Load in data for leaflet map
-locations <- read.csv("../data/cleaned_data/hospital_locations_clean.csv")
+locations <- read.csv("cleaned_data/hospital_locations_clean.csv")
 
-waiting_times <- read.csv("../data/a_and_e/monthly_ae_activity_202305.csv") %>% 
+waiting_times <- read.csv("a_and_e/monthly_ae_activity_202305.csv") %>% 
   clean_names()
 
 #thijmen end

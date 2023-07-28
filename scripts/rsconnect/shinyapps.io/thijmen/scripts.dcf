@@ -4,8 +4,8 @@ username:
 account: thijmen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 9489162
-bundleId: 7482811
+appId: 9521314
+bundleId: 7505998
 url: https://thijmen.shinyapps.io/scripts/
-when: 1689950954.48271
-lastSyncTime: 1689950954.48276
+when: 1690537947.93292
+lastSyncTime: 1690537947.93294
